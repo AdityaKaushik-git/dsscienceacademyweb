@@ -20,6 +20,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 html {
@@ -27,7 +28,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: auto; /* 0;*/
   font-family: "Rubik", "Roboto", "Helvetica", "Arial", sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -89,7 +90,7 @@ a.btn {
 
 .brand img {
   width: 50px;
-  height: 50px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -154,12 +155,12 @@ a.btn {
 }
 
 .hero-copy {
-  max-width: 640px;
+  max-width: 500px;
 }
 .eyebrow h1{
     font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 700;
   font-style: normal;
 }
 .eyebrow {
@@ -176,7 +177,7 @@ a.btn {
 .hero-copy h1{
       font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 700;
   font-style: normal;
 }
 .hero-copy,
@@ -191,7 +192,7 @@ a.btn {
 .hero-copy span{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 700;
   font-style: normal;
 }
 .hero-copy p,
@@ -383,8 +384,10 @@ a.btn {
   .site-nav {
     justify-content: flex-end;
     position: absolute;
-    left: 0;
-    inset: 76px 20px 0;
+    left: 20px;
+    top: 70px;
+    right: 20px;
+    bottom:auto;
     display: grid;
     background: rgba(255, 255, 255, 0.98);
     border: 1px solid var(--border);
@@ -422,8 +425,45 @@ a.btn {
     grid-template-columns: 1fr;
   }
 }
-site-header{
-  height: 10px;
-  padding: 20px 0;
+.site-header{
+  height: auto;
+  padding: 0px;
+
+}
+
+@media (max-width:480px){
+
+.container{
+    width:95%;
+}
+
+.hero-copy h1{
+    font-size:2rem;
+    line-height:1.2;
+}
+
+.hero-copy p{
+    font-size:15px;
+}
+
+.btn{
+    width:100%;
+}
+
+.brand img{
+    width:40px;
+    height:40px;
+}
+
+.header-inner{
+    gap:10px;
+}
+
+.hero-grid,
+.feature-grid,
+.why-grid,
+.footer-grid{
+    gap:20px;
+}
 
 }
